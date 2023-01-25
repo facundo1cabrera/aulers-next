@@ -27,6 +27,20 @@ module.exports = {
           'hero': "url('/img/background-hero.png')",
           'purple-hero': "url('/img/purple-hero.png')",
         },
+        spacing: {
+          'image': '448px',
+        },
+        keyframes: {
+          slide: {
+            '25%': { transform: 'translateX(50px)'},
+            '50%': { transform: 'translateX(50px)'},
+            '75%': { transform: 'translateX(50px)'},
+            '100%': { transform: 'translateX(50px)'}
+          }
+        },
+        animation: {
+          'slider': 'slide 2s linear'
+        }
       }
     },
     plugins: [],
