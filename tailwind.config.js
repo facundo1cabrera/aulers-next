@@ -19,7 +19,7 @@ module.exports = {
         colors: {
           'dark-purple': '#271F5F',
           'purple': '#644FFF',
-          'light-blue': '#57D7F7',
+          'red': '#57D7F7',
           'green': '#4AF799',
           'black': '#28272F',
         },
@@ -29,17 +29,6 @@ module.exports = {
         },
         spacing: {
           'image': '448px',
-        },
-        keyframes: {
-          slide: {
-            '25%': { transform: 'translateX(50px)'},
-            '50%': { transform: 'translateX(50px)'},
-            '75%': { transform: 'translateX(50px)'},
-            '100%': { transform: 'translateX(50px)'}
-          }
-        },
-        animation: {
-          'slider': 'slide 2s linear'
         }
       }
     },
