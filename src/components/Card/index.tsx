@@ -1,23 +1,46 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
 import { FiMoreHorizontal } from 'react-icons/fi';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { AddToCartModal } from '../AddToCartModal';
 
 type Card = FC;
 
 export const Card: Card = () => {
 
+    const ref = useRef<HTMLDivElement>(null);
+
+    const [showModal, setShowModal] = useState(false);
+
+    useEffect(() => {
+        const checkIfClickedOutside = (e: any) => {
+            if (showModal && ref.current && !ref.current.contains(e.target)) {
+                setShowModal(false);
+            }
+        }
+        
+        document.addEventListener("mousedown", checkIfClickedOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", checkIfClickedOutside);
+        }
+    }, [showModal]);
+
     return (
-        <div className='w-full lg:w-2/4 flex flex-col justify-center items-center py-10 relative ease-out delay-200'>
+        <div className={`w-full lg:w-2/4 flex flex-col justify-center items-center py-10 relative ease-out delay-20`}>
+            {
+                (showModal) ? (
+                    <div ref={ref}>
+                        <AddToCartModal setShowModal={setShowModal}/>
+                    </div>
+                )
+                    : null
+            }
             <div className="flex flex-col justify-center items-start mb-2 relative">
                 <p className="text-xl opacity-90 mb-3">Sobrecamisa de pana Oversized Fit</p>
                 <p className="text-base opacity-80">$12.302</p>
-                <FiMoreHorizontal size={30} className="absolute bottom-0 right-0 z-10 cursor-pointer"/>
-                <div className="absolute z-50 space-y-2 top-16 -right-24 border shadow-sm bg-white flex flex-col justify-end items-center p-4">
-                    <p className="px-2 border border-gray-200 w-full rounded-sm text-center" >Añadir al carrito</p>
-                    <a className="px-2 cursor-pointer bg-dark-purple text-white w-full rounded-sm text-center py-1" >Comprar ahora</a>
-                </div>
+                <FiMoreHorizontal size={30} className="absolute bottom-0 right-0 z-10 cursor-pointer" onClick={() => setShowModal(true)} />
             </div>
             <CarouselProvider
                 naturalSlideWidth={200}
@@ -28,7 +51,7 @@ export const Card: Card = () => {
                 <ButtonBack className="">
                     <AiOutlineLeft />
                 </ButtonBack>
-                <Slider className="h-image w-2/4 relative">
+                <Slider className="h-image w-2/4 relative cursor-pointer">
                     <Slide index={0} className="h-full flex">
                         <img className="h-image object-contain m-auto" src="/img/example1.png"/>
                     </Slide>
