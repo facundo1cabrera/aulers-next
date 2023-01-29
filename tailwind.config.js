@@ -26,9 +26,11 @@ module.exports = {
         backgroundImage: {
           'hero': "url('/img/background-hero.png')",
           'purple-hero': "url('/img/purple-hero.png')",
+          'login': "url('/img/wardrobe.png')"
         },
         spacing: {
           'image': '448px',
+          'circle': '700px'
         },
         keyframes: {
           popup: {
