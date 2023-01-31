@@ -5,7 +5,7 @@ type Header = FC;
 
 export const Header = () => {
     return (
-        <header className="w-full h-16 border-b-2 border-neutral-200 font-display">
+        <header className="w-full h-16 border-b-2 border-neutral-200">
             <div className="flex h-full w-11/12 justify-between m-auto items-center text-black">
                 <h1 className="font-semibold text-2xl hover:cursor-pointer">Aulers</h1>
                 <div className="flex font-light text-base justify-between w-44">

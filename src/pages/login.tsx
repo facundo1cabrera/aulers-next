@@ -1,42 +1,36 @@
 
 export default function LoginPage() {
     return (
-        <div className="w-full h-screen flex font-display overflow-hidden text-black bg-login bg-cover relative">
-            <h1 className="absolute top-0 left-0 text-2xl font-semibold">Aulers</h1>
-            <div className="lg:w-2/5 w-full h-full flex flex-col items-center justify-center bg-white">
-                <div className="">
-                    <h2 className="text-3xl font-semibold">Inicia sesión</h2>
-                    <p className="text-base text-zinc-700 font-medium">Consegui ropa unica a un precio unico.</p>
+        <div className="w-full h-full flex justify-center items-center relative text-black">
+            <div className="w-login h-screen my-12 shadow-2xl shadow-stone-500 flex flex-col items-center">
+                <div className="h-14"></div>
+                <h2 className="text-2xl mb-4">Bienvenido, de nuevo!</h2>
+                <p className="opacity-75 font-medium">Conseguí ropa unica a un precio unico.</p>
+                <p className="opacity-75 font-medium">Inicia sesión en Aulers.</p>
+                <div className="h-10"></div>
+                <div className="w-80 rounded-sm p-3 border relative border-gray-400">
+                    <div className="absolute -top-3 bg-white px-2">Correo</div>
+                    <input type="text" placeholder="emailpersonal@mail.com" className="outline-none"/>
                 </div>
-
-                <div className="h-20 w-full"></div>
-                
-                <div className="flex flex-col justify-center items-center w-full">
-                    <div className="">
-                        <p className="mb-2">Correo</p>
-                        <div className="px-4 border w-64 border-gray-400 mb-4">
-                            <input className="w-full h-10 outline-none text-black" placeholder="correo.ejemplo@mail.com">
-
-                            </input>
-                        </div>
-                        <p className="mb-2">Contraseña</p>
-                        <div className="px-4 border w-64 border-gray-400">
-                            <input className="w-full h-10 outline-none text-black" placeholder="*******">
-
-                            </input>
-                        </div>
-                    </div>
-                    <div className="h-16 w-full"></div>
-                    <div className="flex w-full justify-center">
-                        <button className="py-1 px-8 bg-green rounded-sm text-base">Iniciar sesión</button>
-                        <div className="w-6"></div>
-                        <a className="py-1 px-8 border border-gray-300 rounded-sm text-base" href="/register">Registrate</a>
-                    </div>
+                <div className="h-10"></div>
+                <div className="w-80 rounded-sm p-3 border relative border-gray-400">
+                    <div className="absolute -top-3 bg-white px-2">Contraseña</div>
+                    <input type="text" placeholder="********" className="outline-none"/>
                 </div>
-                
-            </div>
-            <div className="lg:w-3/5 h-full w-0">
+                <div className="h-10"></div>
+                <button className="text-center bg-green w-80 h-10 rounded-sm transition-all duration-500 hover:font-medium hover:bg-light-blue text-xl">Iniciar sesión</button>
+                <div className="flex mt-4 w-80">
+                    <p>Olvidaste tu contraseña?</p>
+                    <div className="w-2"></div>
+                    <a href="/reset-password" className="text-purple hover:font-medium">Haz click aqui.</a>
+                </div>
+                <div className="flex my-4 items-center">
+                    <div className="w-40 h-0 border border-gray-300"></div>
+                    <p className="mx-4">O</p>
+                    <div className="w-40 h-0 border border-gray-300"></div>
+                </div>
+                <a href="/register" className="text-center items-center border border-gray-300 w-80 py-2 rounded-sm cursor-pointer hover:font-medium">Registrarse</a>
             </div>
         </div>
-    )
+    );
 }

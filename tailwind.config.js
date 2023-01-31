@@ -3,9 +3,6 @@ module.exports = {
         "./src/**/*.{js,ts,jsx,tsx}",
       ],
     theme: {
-      fontFamily: {
-        "display": ['Roboto Slab']
-      },
       fontSize: {
         sm: '16px',
         base: '20px',
@@ -26,11 +23,10 @@ module.exports = {
         backgroundImage: {
           'hero': "url('/img/background-hero.png')",
           'purple-hero': "url('/img/purple-hero.png')",
-          'login': "url('/img/wardrobe.png')"
         },
         spacing: {
           'image': '448px',
-          'circle': '700px'
+          'login': '448px'
         },
         keyframes: {
           popup: {

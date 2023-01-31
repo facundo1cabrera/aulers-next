@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <main className="font-display w-full">
+      <main className="w-full">
         <div className="w-full h-full bg-hero bg-no-repeat bg-cover pb-60">
           <div className="lg:w-5/6 w-full m-auto pt-36 text-black">
               <h1 className="text-3xl lg:w-2/4">Compra ropa como nunca habias hecho</h1>
