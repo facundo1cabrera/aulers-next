@@ -8,6 +8,7 @@ export default function LoginPage() {
     const handleLogin = () => {
         router.push('/');
     }
+    
 
     return (
         <div className="w-full h-full flex justify-center items-center relative text-black">
