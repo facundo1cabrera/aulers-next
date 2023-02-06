@@ -9,7 +9,6 @@ export default function LoginPage() {
         router.push('/');
     }
     
-
     return (
         <div className="w-full h-full flex justify-center items-center relative text-black">
             <div className="w-login h-full sm:my-12 shadow-2xl shadow-stone-500 flex flex-col items-center">
