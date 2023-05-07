@@ -14,15 +14,9 @@ module.exports = {
       },
       extend: {
         colors: {
-          'dark-purple': '#271F5F',
-          'purple': '#644FFF',
-          'light-blue': '#57D7F7',
-          'green': '#4AF799',
-          'black': '#28272F',
-        },
-        backgroundImage: {
-          'hero': "url('/img/background-hero.png')",
-          'purple-hero': "url('/img/purple-hero.png')",
+          'principal': '#F1E2D1',
+          'secondary': '#E76F51',
+          'secondary-h': '#F4552D'
         },
         spacing: {
           'image': '448px',
