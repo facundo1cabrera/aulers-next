@@ -10,8 +10,8 @@ export default function LoginPage() {
     }
     
     return (
-        <div className="w-full h-full flex justify-center items-center relative text-black">
-            <div className="w-login h-full sm:my-12 shadow-2xl shadow-stone-500 flex flex-col items-center">
+        <div className="w-full h-full flex justify-center items-center relative text-black bg-principal">
+            <div className="w-login h-full sm:my-12 shadow-2xl shadow-stone-500 flex flex-col items-center bg-white">
                 <div className="h-14"></div>
                 <h2 className="text-2xl mb-4">Bienvenido, de nuevo!</h2>
                 <p className="opacity-75 font-medium">Conseguí ropa unica a un precio unico.</p>
@@ -27,7 +27,7 @@ export default function LoginPage() {
                     <input type="text" placeholder="********" className="outline-none"/>
                 </div>
                 <div className="h-14"></div>
-                <button className="text-center bg-green w-80 h-10 rounded-sm transition-all duration-500 hover:font-medium hover:bg-light-blue text-xl" onClick={() => handleLogin()}>Iniciar sesión</button>
+                <button className="text-center bg-green w-80 h-10 rounded-sm transition-all duration-500 hover:font-medium hover:bg-secondary-h bg-secondary  text-xl" onClick={() => handleLogin()}>Iniciar sesión</button>
                 <div className="flex mt-4 w-80">
                     <p>Olvidaste tu contraseña?</p>
                     <div className="w-2"></div>
