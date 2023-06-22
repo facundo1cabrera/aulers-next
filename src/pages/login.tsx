@@ -1,5 +1,5 @@
 import { useRouter } from 'next/navigation';
-
+import { Logo } from "@/components/Logo/";
 
 export default function LoginPage() {
 
@@ -10,36 +10,72 @@ export default function LoginPage() {
     }
     
     return (
-        <div className="w-full h-full flex justify-center items-center relative text-black bg-principal">
-            <div className="w-login h-full sm:my-12 shadow-2xl shadow-stone-500 flex flex-col items-center bg-white">
-                <div className="h-14"></div>
-                <h2 className="text-2xl mb-4">Bienvenido, de nuevo!</h2>
-                <p className="opacity-75 font-medium">Conseguí ropa unica a un precio unico.</p>
-                <p className="opacity-75 font-medium">Inicia sesión en Aulers.</p>
-                <div className="h-10"></div>
-                <div className="w-80 rounded-sm p-3 border relative border-gray-400">
-                    <div className="absolute -top-3 bg-white px-2">Correo</div>
-                    <input type="text" placeholder="emailpersonal@mail.com" className="outline-none"/>
+        <div className="flex h-full w-full">
+
+            <section className="min-h-screen w-full h-full shadow-2xl flex flex-col lg:w-2/5">
+
+                <div className="pl-5 pt-2.5 mb-10">
+                    <Logo></Logo>
                 </div>
-                <div className="h-10"></div>
-                <div className="w-80 rounded-sm p-3 border relative border-gray-400">
-                    <div className="absolute -top-3 bg-white px-2">Contraseña</div>
-                    <input type="text" placeholder="********" className="outline-none"/>
+
+                <main className="flex flex-col items-center justify-center flex-grow">
+                    <div className='w-full'>
+                        <h2 className="text-3xl text-left px-login-container-large pb-6 leading-tight">
+                            Bienvenido, de nuevo!
+                        </h2> 
+                        <div className="mb-36 px-login-container-large"> 
+                            <p className="opacity-75 font-medium text-left mb-4">
+                                Consegui ropa unica a un precio unico. Inicia sesión en Aulers.
+                            </p>
+                            <div className="flex flex-col items-start justify-">
+                                <p className="opacity-75 font-medium text-center">
+                                    No tenes una cuenta todavia?
+                                </p>
+                                <a href="/login" className="text-principal underline hover:font-medium">
+                                    Creá una
+                                </a>
+                            </div>
+
+                        </div>
+                    <div className="flex flex-col items-center">
+                        
+
+                        <div className="h-6 w-full px-login-container-large  rounded-sm pb-6 relative mb-28">
+                            <input type="text" placeholder="Email" className="border-b-2 border-gray-400 outline-none w-full 
+                        hover:placeholder:text-principal hover:border-principal focus:border-principal focus:placeholder:text-principal"/>
+                        </div>
+
+                        <div className="h-6 w-full px-login-container-large rounded-sm pb-6 relative mb-28">
+                            <input type="text" placeholder="Contraseña" className="border-b-2 border-gray-400 outline-none w-full 
+                        hover:placeholder:text-principal hover:border-principal focus:border-principal focus:placeholder:text-principal"/>
+                        </div>
+
+                        <div className=" items-center w-full px-login-container-large">
+                            <button className="py-2 px-4 w-full h-12 bg-principal rounded-sm text-white font-semibold text-xl text-center">
+                                Iniciar sesión
+                            </button>
+
+                            <div className="flex mt-5 mb-8 justify-between">
+                                <p>
+                                    ¿Olvidaste tu contraseña?
+                                </p>
+
+                                <a href="/login" className="text-principal underline hover:font-medium">
+                                    Haz click aquí
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div className="h-14"></div>
-                <button className="text-center bg-green w-80 h-10 rounded-sm transition-all duration-500 hover:font-medium hover:bg-secondary-h bg-secondary  text-xl" onClick={() => handleLogin()}>Iniciar sesión</button>
-                <div className="flex mt-4 w-80">
-                    <p>Olvidaste tu contraseña?</p>
-                    <div className="w-2"></div>
-                    <a href="/reset-password" className="text-purple hover:font-medium">Haz click aqui.</a>
-                </div>
-                <div className="flex my-6 items-center">
-                    <div className="w-40 h-0 border border-gray-300"></div>
-                    <p className="mx-4">O</p>
-                    <div className="w-40 h-0 border border-gray-300"></div>
-                </div>
-                <a href="/register" className="mb-12 text-center items-center border border-gray-300 w-80 py-2 rounded-sm cursor-pointer hover:font-medium">Registrarse</a>
-            </div>
+            </main>
+            
+            </section>
+
+            <section className="bg-red-500 h-100% w-3/5 hidden lg:block">
+                <img className=" w-full h-full object-cover object-center" src="image4.jpg" alt="" />
+            </section>
+
         </div>
     );
 }
