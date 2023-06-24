@@ -41,6 +41,10 @@ module.exports = {
         animation: {
           'modal-popup': 'popup 0.07s linear ',
         },
+        padding: {
+          'login-container-large': '15%',
+          'login-container-medium': '17%'
+        },
       }
     },
     plugins: [],

@@ -1,41 +1,72 @@
+import { Logo } from "@/components/Logo/";
+
 export default function registerPage() {
     return (
-        <div className="w-full h-full flex justify-center items-center relative text-black bg-principal">
-            <div className="w-login h-full my-12 shadow-2xl shadow-stone-500 flex flex-col items-center bg-white">
-                <div className="h-10"></div>
-                <h2 className="text-2xl mb-4">Creá tu cuenta!</h2>
-                <p className="opacity-75 font-medium 2-96 text-center">Consegui ropa unica a un precio unico.</p>
-                <p className="opacity-75 font-medium w-96 text-center">
-                    Crea una cuenta en Aulers y cambia la forma en la que compras ropa online
-                </p>
-                <div className="h-8"></div>
-                <div className="w-80 rounded-sm p-3 border relative border-gray-400">
-                    <div className="absolute -top-3 bg-white px-2">Nombre</div>
-                    <input type="text" placeholder="Escribe tu nombre" className="outline-none"/>
+        <div className="flex h-full w-full">
+
+            <section className="min-h-screen w-full h-full shadow-2xl flex flex-col lg:w-2/5">
+
+                <div className="pl-5 pt-2.5 mb-10">
+                    <Logo></Logo>
                 </div>
-                <div className="h-6"></div>
-                <div className="w-80 rounded-sm p-3 border relative border-gray-400">
-                    <div className="absolute -top-3 bg-white px-2">Apellido</div>
-                    <input type="text" placeholder="Escribe tu apellido" className="outline-none"/>
+
+                <main className="flex flex-col items-center justify-center flex-grow">
+                    <div className='w-full'>
+                        <h2 className="text-3xl text-left px-login-container-large pb-6 leading-tight">
+                            Creá tu cuenta!
+                        </h2> 
+                        <div className="mb-10 px-login-container-large"> 
+                            <p className="opacity-75 font-medium text-left mb-4">
+                                Consegui ropa unica a un precio unico. Inicia sesión en Aulers.
+                            </p>
+                        </div>
+                    <div className="flex flex-col items-center">
+                        <div className="h-6 w-full px-login-container-large rounded-sm pb-6 relative mb-16">
+                            <input type="text" placeholder="Nombre" className="border-b-2 border-gray-400 outline-none w-full 
+                        hover:placeholder:text-principal hover:border-principal focus:border-principal focus:placeholder:text-principal"/>
+                        </div>
+
+                        <div className="h-6 w-full px-login-container-large rounded-sm pb-6 relative mb-16">
+                            <input type="text" placeholder="Apellido" className="border-b-2 border-gray-400 outline-none w-full 
+                        hover:placeholder:text-principal hover:border-principal focus:border-principal focus:placeholder:text-principal"/>
+                        </div>
+
+                        <div className="h-6 w-full px-login-container-large  rounded-sm pb-6 relative mb-16">
+                            <input type="text" placeholder="Email" className="border-b-2 border-gray-400 outline-none w-full 
+                        hover:placeholder:text-principal hover:border-principal focus:border-principal focus:placeholder:text-principal"/>
+                        </div>
+
+                        <div className="h-6 w-full px-login-container-large rounded-sm pb-6 relative mb-28">
+                            <input type="text" placeholder="Contraseña" className="border-b-2 border-gray-400 outline-none w-full 
+                        hover:placeholder:text-principal hover:border-principal focus:border-principal focus:placeholder:text-principal"/>
+                        </div>
+
+                        <div className=" items-center w-full px-login-container-large">
+                            <button className="py-2 px-4 w-full h-12 bg-principal rounded-sm text-white font-semibold text-xl text-center">
+                                Registrate
+                            </button>
+
+                            <div className="flex mt-5 mb-8 justify-between">
+                                <p>
+                                    Ya tenes una cuenta?
+                                </p>
+
+                                <a href="/login" className="text-principal underline hover:font-medium">
+                                    Inicia sesión
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div className="h-6"></div>
-                <div className="w-80 rounded-sm p-3 border relative border-gray-400">
-                    <div className="absolute -top-3 bg-white px-2">Correo</div>
-                    <input type="text" placeholder="Escribe tu email personal" className="outline-none"/>
-                </div>
-                <div className="h-6"></div>
-                <div className="w-80 rounded-sm p-3 border relative border-gray-400">
-                    <div className="absolute -top-3 bg-white px-2">Contraseña</div>
-                    <input type="text" placeholder="Escribe tu contraseña" className="outline-none"/>
-                </div>
-                <div className="h-8"></div>
-                <button className="text-center bg-green w-80 h-10 rounded-sm transition-all duration-500 hover:bg-secondary-h bg-secondary text-xl ">Register</button>
-                <div className="flex mt-2 w-80 mb-8">
-                    <p>Ya tenes una cuenta?</p>
-                    <div className="w-1"></div>
-                    <a href="/login" className="text-purple hover:font-medium">Inicia sesión.</a>
-                </div>
-            </div>
+            </main>
+            
+            </section>
+
+            <section className="bg-red-500 h-100% w-3/5 hidden lg:block">
+                <img className=" w-full h-full object-cover object-center" src="image4.jpg" alt="" />
+            </section>
+
         </div>
     );
 }
