@@ -15,13 +15,14 @@ module.exports = {
       extend: {
         colors: {
           'principal': '#DD2D4A',
-          'secondary': '#E76F51',
+          'secondary': '#F9FAFB',
           'secondary-h': '#F4552D'
         },
         spacing: {
           'line': '2px',
           'small-line': '1px',
-          'selected-item': '450px'
+          'selected-item': '450px',
+          '92vh': '92vh',
         },
         keyframes: {
           popup: {

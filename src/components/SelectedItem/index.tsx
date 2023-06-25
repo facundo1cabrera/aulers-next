@@ -7,8 +7,8 @@ export const SelectedItem: FC = () => {
     return (
         <>
             <div className="max-w-2xl m-auto columns-2 gap-x-5 pt-10 h-selected-item mb-10">
-                <div className="w-full bg-red-300 h-full">
-
+                <div className="w-full h-full">
+                    <img src="image1.jpg" className="object-contain w-full h-full"/>
                 </div>
                 <div className="w-full flex flex-col h-full">
                     <h1 className="text-xl">Remera tortuga verde mar</h1>

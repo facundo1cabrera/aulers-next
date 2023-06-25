@@ -6,14 +6,16 @@ export const Header: FC = () => {
     return (
         <>
             <header className="h-14 flex justify-center shadow-lg w-full z-50">
-                <div className="w-full max-w-5xl flex items-center justify-between">
-                    <Logo />
+                <div className="w-full max-w-5xl flex items-center justify-between px-6 sm:px-0">
+                    <div className="">
+                        <Logo />
+                    </div>
                     <nav className="transition-all ease-in-out">
                         <ul className="flex gap-9 m-0 items-center">
-                            <li className="cursor-pointer">
+                            <li className="cursor-pointer hidden sm:block">
                                 <a className="no-underline">Mujer</a>
                             </li>
-                            <li className="cursor-pointer">
+                            <li className="cursor-pointer hidden sm:block">
                                 <a className="no-underline">Hombre</a>
                             </li>
                             <li className="cursor-pointer">
