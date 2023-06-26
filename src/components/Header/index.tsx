@@ -5,8 +5,8 @@ export const Header: FC = () => {
 
     return (
         <>
-            <header className="h-14 flex justify-center shadow-lg w-full z-50">
-                <div className="w-full max-w-5xl flex items-center justify-between px-6 sm:px-0">
+            <header className="h-20 flex justify-center shadow-lg w-full z-50">
+                <div className="w-full px-4 sm:px-20 flex items-center justify-between">
                     <div className="">
                         <Logo />
                     </div>

@@ -8,12 +8,12 @@ export const Gallery: FC = () => {
 
     return (
         <>
-            <div className="max-w-4xl m-auto">
+            <div className="max-w-7xl m-auto">
                 <div className="flex flex-col pt-8">
-                    <h1 className="pb-1 text-xl">Explorá</h1>
+                    <h1 className="pb-1 text-2xl">Explorá</h1>
                     <div className="h-small-line w-full bg-gray-400"></div>
                 </div>
-                <div className="w-full columns-4 gap-x-3 box-border pt-10">
+                <div className="w-full columns-1 sm:columns-2 md:columns-4 gap-x-3 box-border pt-10">
                     {
                         images.map(image => (
                             <>
